@@ -1,5 +1,8 @@
+//vendors
 @import "ember-bootstrap/bootstrap";
-@import "custom";
+@import 'ember-cli-loaders/variables';
+@import 'ember-cli-loaders/mixins';
+@import 'ember-cli-loaders/animations/ball-scale-ripple-multiple';
 
 //vars
 $primary: #EDDCDB;
@@ -7,3 +10,6 @@ $accent: #A37675;
 $secondary: #CBAB58;
 $foreground: #212121;
 $background: #f2f2f2;
+
+@import 'animation';
+@import 'custom';

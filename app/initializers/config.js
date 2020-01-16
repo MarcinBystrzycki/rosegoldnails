@@ -1,16 +1,6 @@
-export function initialize(app) {
+import Store from '@ember-data/store';
 
-  // const store = app.container.lookup('store:main');
-  console.log(app);
-  // store.queryRecord('application', {}).then(data => {
-  //   // handle stuff
-  //   console.log('success', data);
-  //   app.advanceReadiness();
-  // }).catch(err => {
-  //   // handle error
-  //   console.log('err', err);
-  //   app.advanceReadiness();
-  // });
+export function initialize(app) {
 }
 
 export default {

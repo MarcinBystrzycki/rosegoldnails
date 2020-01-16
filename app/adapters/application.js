@@ -5,6 +5,9 @@ export default class ApplicationAdapter extends RESTAdapter {
     host = 'http://localhost:3000';
     namespace = 'api';
     pathForType(type) {
-        return singularize(type);
+        if (type === 'application') {
+            return singularize(type);
+        }
+        return type;
     }
 }

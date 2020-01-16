@@ -1,0 +1,32 @@
+.main {
+  margin-top: 80px;
+}
+
+.loading-screen {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: $primary;
+
+  &.show {
+    animation: show .35s ease;
+  }
+
+  &.hide {
+    animation: hide .35s ease;
+  }
+
+  .ball-scale-ripple-multiple {
+    transform: translateY(-50px);
+  }
+
+  .ball-scale-ripple-multiple > div {
+    border-color: $secondary;
+    width: 100px;
+    height: 100px;
+    left: -52px;
+  }
+}
