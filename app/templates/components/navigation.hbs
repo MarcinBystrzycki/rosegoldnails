@@ -7,20 +7,23 @@
 <!--                <span class="icon-bar"></span>-->
 <!--            </button>-->
             {{#link-to "index" class="navbar-brand"}}
-                <img local-class="logo" src="{{navigation.logoSrc}}" alt="">
+                <img local-class="logo" src="{{logoSrc}}" alt="">
             {{/link-to}}
         </div>
 
         <div class="collapse navbar-collapse row justify-content-end" id="main-navbar">
             <ul class="nav navbar-nav">
-                {{#each navigation.links as |link|}}
+                {{#each links as |link|}}
                     <li class="nav-item">
-                        {{#link-to link.path class="nav-link"}}
-                            {{link.name}}
-                        {{/link-to}}
+                        <NavLinkTo @link={{link}}></NavLinkTo>
                     </li>
                 {{/each}}
             </ul>
+            <div local-class="navbar-socials" class="navbar-text">
+                {{#each social as |socialButton|}}
+                    <SocialButton @socialButton={{socialButton}}></SocialButton>
+                {{/each}}
+            </div>
         </div>
     </div>
 </nav>

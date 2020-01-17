@@ -1,13 +1,14 @@
 import RESTAdapter from '@ember-data/adapter/rest';
-import { singularize } from 'ember-inflector'
+import { pluralize, singularize } from 'ember-inflector';
 
 export default class ApplicationAdapter extends RESTAdapter {
+    defaultSerializer = 'RESTSerializer';
     host = 'http://localhost:3000';
     namespace = 'api';
-    pathForType(type) {
-        if (type === 'application') {
-            return singularize(type);
+    pathForType(modelName) {
+        if (modelName === 'index') {
+            return singularize(modelName);
         }
-        return type;
+        return pluralize(modelName);
     }
 }

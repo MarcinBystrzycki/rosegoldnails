@@ -7,6 +7,13 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     apiUrl: 'http://localhost:3000/',
+    fontawesome: {
+      icons: {
+        'free-solid-svg-icons': 'all',
+        'free-brands-svg-icons': 'all',
+        'free-regular-svg-icons': 'all',
+      }
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

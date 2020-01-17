@@ -5,7 +5,7 @@ import { action } from '@ember/object';
 export default class ApplicationRoute extends Route {
     @service store;
     model() {
-        return this.get('store').queryRecord('application', {});
+        return this.store.findRecord('configuration', 1);
     }
     @action
     loading(transition, originRoute) {

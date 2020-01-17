@@ -12,11 +12,11 @@ module('Unit | Instance Initializer | config', function(hooks) {
       initialize
     });
     this.application = this.TestApplication.create({ autoboot: false });
-    this.instance = this.application.buildInstance();
+    this.instance = this.configuration.buildInstance();
   });
   hooks.afterEach(function() {
     run(this.instance, 'destroy');
-    run(this.application, 'destroy');
+    run(this.configuration, 'destroy');
   });
 
   // Replace this with your real tests.

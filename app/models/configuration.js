@@ -1,7 +1,8 @@
 import Model, { attr } from '@ember-data/model';
 
-export default class NavigationModel extends Model {
+export default class ConfigurationModel extends Model {
     @attr('string') appTitle;
-    @attr() links;
+    @attr navLinks;
+    @attr socialButtons;
     @attr('string') logoSrc;
 }

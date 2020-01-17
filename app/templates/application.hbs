@@ -1,5 +1,5 @@
 <div class="container-fluid main">
-    {{#navigation}}{{/navigation}}
+    <Navigation @links={{model.navLinks}} @logoSrc={{model.logoSrc}} @social={{model.socialButtons}}></Navigation>
 
     {{outlet}}
 </div>

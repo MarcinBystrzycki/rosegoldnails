@@ -1,27 +1,53 @@
 {
-  "application": {
-    "navigation": {
-      "id": 1,
-      "appTitle": "Rose Gold Nails",
-      "links": [
-        {
-          "name": "Start",
-          "path": "index"
-        },
-        {
-          "name": "O salonie",
-          "path": "about"
-        },
-        {
-          "name": "Cennik",
-          "path": "pricelist"
-        },
-        {
-          "name": "Kontakt",
-          "path": "contact"
-        }
-      ],
-      "logoSrc": "/assets/images/rosegoldnails-logo_text_w400.png"
-    }
-  }
+  "configurations": [{
+    "id": 1,
+    "name": "basic",
+    "appTitle": "Rose Gold Nails",
+    "navLinks": [
+      {
+        "name": "Start",
+        "path": "index"
+      },
+      {
+        "name": "O salonie",
+        "path": "about"
+      },
+      {
+        "name": "Cennik",
+        "path": "pricelist"
+      },
+      {
+        "name": "Kontakt",
+        "path": "contact"
+      }
+    ],
+    "socialButtons": [
+      {
+        "icon": "facebook",
+        "prefix": "fab",
+        "href": "https://www.facebook.com/Rose-Gold-Nails-116053889782497/"
+      },
+      {
+        "icon": "instagram",
+        "prefix": "fab",
+        "href": ""
+      }
+    ],
+    "logoSrc": "/assets/images/rosegoldnails-logo_text_w400.png"
+  }],
+  "index": [{
+    "id": 1,
+    "carousel": [
+
+    ]
+  }],
+  "contact": [{
+    "id": 1
+  }],
+  "about": [{
+    "id": 1
+  }],
+  "pricelist": [{
+    "id": 1
+  }]
 }

@@ -16,12 +16,12 @@ module('Unit | Initializer | config', function(hooks) {
   });
 
   hooks.afterEach(function() {
-    run(this.application, 'destroy');
+    run(this.configuration, 'destroy');
   });
 
   // Replace this with your real tests.
   test('it works', async function(assert) {
-    await this.application.boot();
+    await this.configuration.boot();
 
     assert.ok(true);
   });
