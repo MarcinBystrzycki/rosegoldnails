@@ -1,3 +1,25 @@
-.nav-link {
+@mixin hover-pseudo {
+  content: '';
+  position: absolute;
+  width: 0;
+  border: 1px solid $secondary;
+  transition: all .3s ease;
+  opacity: 0;
+}
 
+:global(.nav-link).nav-link {
+  transition: all .3s ease;
+  margin: 0 1rem;
+  position: relative;
+  &:after {
+    @include hover-pseudo;
+    bottom: 0;
+    left: 0;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
 }
