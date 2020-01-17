@@ -1,0 +1,21 @@
+{
+  "name": "rosegoldnails",
+  "description": "Small description for rosegoldnails goes here",
+  "main": "",
+  "authors": [
+    "Marcin Bystrzycki <bystrzycki@programa.pl>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "1.5.8"
+  }
+}

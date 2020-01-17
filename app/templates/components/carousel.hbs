@@ -1,0 +1,11 @@
+<div local-class="carousel-local">
+    {{#bs-carousel transition="fade" autoplay=true as |carousel-item|}}
+        {{#each items as |item|}}
+            <carousel-item.slide>
+                <div local-class="carousel-item-local" class="d-block w-100"
+                     style="background-image: url('{{item.src}}')">
+                </div>
+            </carousel-item.slide>
+        {{/each}}
+    {{/bs-carousel}}
+</div>
