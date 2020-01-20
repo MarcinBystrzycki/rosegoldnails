@@ -1,6 +1,6 @@
 <div local-class="carousel-local">
-    {{#bs-carousel transition="fade" autoplay=true as |carousel-item|}}
-        {{#each items as |item|}}
+    {{#bs-carousel transition="fade" autoplay=true showIndicators=false as |carousel-item|}}
+        {{#each model.carousel as |item|}}
             <carousel-item.slide>
                 <div local-class="carousel-item-local" class="d-block w-100"
                      style="background-image: url('{{item.src}}')">
@@ -8,4 +8,17 @@
             </carousel-item.slide>
         {{/each}}
     {{/bs-carousel}}
+    <div local-class="carousel-overlay-local">
+    </div>
+    <div local-class="carousel-bottom-link-local">
+        <a href="#">
+            <span local-class="text">{{model.carouselBottomLink.text}}</span>
+            <span local-class="icon">
+                <FaIcon local-class="carousel-bottom-link-icon-local" @icon={{model.carouselBottomLink.icon}} @size="3x"/>
+            </span>
+        </a>
+    </div>
+    <div local-class="carousel-logo-local">
+        <img src={{model.mainLogo.src}} alt="">
+    </div>
 </div>

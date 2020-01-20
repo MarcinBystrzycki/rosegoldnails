@@ -1,13 +1,101 @@
 .carousel-local {
+  position: relative;
   .carousel-item-local {
     height: calc(100vh - 101px);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 130%;
     background-position: center center;
-    animation: backgroundScroll 10s linear infinite;
+    animation: backgroundScroll 15s linear infinite;
     animation-fill-mode: forwards;
+
+    @media screen and (max-width: 1280px) {
+      background-size: cover;
+    }
   }
+  .carousel-overlay-local {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $primary;
+    opacity: 0.45;
+    z-index: 10;
+  }
+
+  .carousel-bottom-link-local {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 11;
+    transition: all .3s ease;
+    transition-delay: .15s;
+    a {
+      text-decoration: none;
+    }
+    .text {
+      opacity: 0;
+      display: none;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .icon {
+      color: $white;
+      opacity: 0.5;
+      display: inline-block;
+      box-shadow: inset 0 0 0 0 $secondary;
+    }
+    .carousel-bottom-link-icon-local {
+      transition: all .3s ease;
+    }
+    &:hover {
+      .icon {
+        box-shadow: inset 0 0 0 3px $secondary;
+        color: $secondary;
+        opacity: 1;
+        .carousel-bottom-link-icon-local {
+          transform: scale(0.75);
+        }
+      }
+      .text {
+        display: block;
+        opacity: 1;
+        color: $white;
+      }
+    }
+  }
+
+  .carousel-logo-local {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    max-width: 400px;
+    max-height: 400px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem;
+    border-radius: 50%;
+    box-shadow: 0 0 25px $primary;
+    transition: all .3s ease-in-out;
+    img {
+      width: 100%;
+    }
+    &:hover {
+      box-shadow: 0 0 100px $primary;
+      background: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+
+:global(.carousel-control-prev),
+:global(.carousel-control-next) {
+  position: absolute;
+  z-index: 11;
 }
 
 @keyframes backgroundScroll {

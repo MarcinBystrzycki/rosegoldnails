@@ -54,7 +54,14 @@
         "id": 4,
         "src": "/assets/images/4.jpg"
       }
-    ]
+    ],
+    "carouselBottomLink": {
+      "text": "Więcej",
+      "icon": "arrow-circle-down"
+    },
+    "mainLogo": {
+      "src": "/assets/images/rosegoldnails-logo.png"
+    }
   }],
   "contact": [{
     "id": 1
