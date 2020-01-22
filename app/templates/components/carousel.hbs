@@ -10,14 +10,16 @@
     {{/bs-carousel}}
     <div local-class="carousel-overlay-local">
     </div>
+    {{#if showScrollButton}}
     <div local-class="carousel-bottom-link-local">
-        <a href="#">
+        <a href="#" {{on 'click' this.scrollDown}} >
             <span local-class="text">{{model.carouselBottomLink.text}}</span>
             <span local-class="icon">
                 <FaIcon local-class="carousel-bottom-link-icon-local" @icon={{model.carouselBottomLink.icon}} @size="3x"/>
             </span>
         </a>
     </div>
+    {{/if}}
     <div local-class="carousel-logo-local">
         <img src={{model.mainLogo.src}} alt="">
     </div>

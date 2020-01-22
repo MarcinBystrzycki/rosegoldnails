@@ -1,4 +1,5 @@
-<div {{css-transition 'fade-page'}}>
-    <Carousel @model={{model.page}}></Carousel>
+<div {{css-transition 'fade-page'}} class="index-view">
+    <Carousel @model={{model.page}} @showScrollButton={{true}}></Carousel>
+    <div data-scroll-anchor></div>
 </div>
 
