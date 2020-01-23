@@ -1,5 +1,20 @@
 <div {{css-transition 'fade-page'}} class="index-view">
-    <Carousel @model={{model.page}} @showScrollButton={{true}}></Carousel>
-    <div data-scroll-anchor></div>
+    {{#if model.page.carousel}}
+        <Carousel @carousel={{model.page.carousel}}
+                  @carouselBottomLink={{model.page.carouselBottomLink}}
+                  @mainLogo={{model.page.mainLogo}}
+                  @showScrollButton={{true}}></Carousel>
+    {{/if}}
+    <div data-scroll-anchor class="info-panel">
+        <div>
+            <div class="info-text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel.
+                </p>
+                <button class="btn btn-basic">Sprawdź</button>
+            </div>
+        </div>
+    </div>
+    <Maps @map={{model.page.map}} @address={{model.page.address}} @contact={{model.page.contactInfo}}></Maps>
 </div>
 

@@ -38,5 +38,40 @@ body {
 }
 
 .index-view {
-  min-height: 200vh;
+  //min-height: 200vh;
+}
+
+.info-panel {
+  min-height: 10rem;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .info-text {
+    //fix transition width bug
+    width: calc(100vw - 15px);
+    color: $accent;
+    font-size: 1.25rem;
+  }
+}
+
+.btn {
+  &.btn-basic {
+    background-color: $accent;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 100;
+    padding: .25rem 1rem;
+    box-shadow: 0 8px 6px -6px $accent;
+    transition: all .15s ease-in-out;
+    &:hover {
+      box-shadow: 0 0 2px 0 $accent;
+      background-color: darken($accent, 10%);
+    }
+  }
+}
+
+.hidden {
+  opacity: 0;
 }

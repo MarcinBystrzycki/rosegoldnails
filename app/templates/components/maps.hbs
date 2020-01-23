@@ -1,1 +1,41 @@
-{{yield}}
+<div local-class="map-local">
+    {{#if map}}
+        {{#if mapStyles}}
+            {{#g-map lat=map.lat lng=map.lng zoom=map.zoom styles=mapStyles streetViewControl=false
+                     disableDefaultUI=true
+                     panControl=false as |g|}}
+                {{#g.overlay lat=map.lat lng=map.lng onMouseover=(action this.toggleTooltip false)
+                             onMouseleave=(action this.toggleTooltip true)}}
+                    <div local-class="marker">
+                        <FaIcon local-class="marker-icon" @icon="map-marker-alt" @prefix="fas" @size="3x"/>
+                        <div local-class="marker-tooltip" class="{{if this.tooltipHidden "hidden"}}">
+                            <div local-class="marker-tooltip-logo">
+                                <img src={{map.logoSrc}} alt="#">
+                            </div>
+                            <div local-class="marker-tooltip-text-wrapper">
+                                <p local-class="marker-tooltip-text">
+                                    {{#if address}}
+                                        <strong>Adres:</strong><br/>
+                                        {{address.postal}} {{address.city}},<br/>
+                                        {{address.street}}<br/>
+                                    {{/if}}
+                                </p>
+                                <p local-class="marker-tooltip-text">
+                                    {{#if contact}}
+                                        <strong>Kontakt:</strong><br/>
+                                        <a href="tel:{{contact.phone}}">
+                                            {{contact.phone}}
+                                        </a><br/>
+                                        <a href="mailto:{{contact.email}}">
+                                            {{contact.email}}
+                                        </a>
+                                    {{/if}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {{/g.overlay}}
+            {{/g-map}}
+        {{/if}}
+    {{/if}}
+</div>

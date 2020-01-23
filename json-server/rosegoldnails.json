@@ -61,10 +61,42 @@
     },
     "mainLogo": {
       "src": "/assets/images/rosegoldnails-logo.png"
+    },
+    "address": {
+      "street": "Zielony Rynek 9",
+      "city": "Gniezno",
+      "postal": "62-200"
+    },
+    "map": {
+      "lat": 52.5338178,
+      "lng": 17.5948512,
+      "zoom": 16,
+      "styleJson": "/assets/config/map.json",
+      "logoSrc": "/assets/images/rosegoldnails-logo_text_w100.png"
+    },
+    "contactInfo": {
+      "phone": "(+48) 663-622-823",
+      "email": "basialangner@hotmail.com"
     }
   }],
   "contact": [{
-    "id": 1
+    "id": 1,
+    "address": {
+      "street": "Zielony Rynek 9",
+      "city": "Gniezno",
+      "postal": "62-200"
+    },
+    "contactInfo": {
+      "phone": "(+48) 663-622-823",
+      "email": "basialangner@hotmail.com"
+    },
+    "map": {
+      "lat": 52.5338178,
+      "lng": 17.5948512,
+      "zoom": 16,
+      "styleJson": "/assets/config/map.json",
+      "logoSrc": "/assets/images/rosegoldnails-logo_text_w100.png"
+    }
   }],
   "about": [{
     "id": 1

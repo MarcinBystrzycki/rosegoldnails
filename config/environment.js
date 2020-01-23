@@ -31,6 +31,18 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['ember-google-maps'] = {
+    key: process.env.GOOGLE_MAPS_API_KEY, // Using .env files in this example
+    language: 'pl',
+    region: 'PL',
+    protocol: 'https',
+    version: '3.40',
+    // libraries: ['geometry', 'places'], // Optional libraries
+    // client: undefined,
+    // channel: undefined,
+    // baseUrl: '//maps.googleapis.com/maps/api/js'
+  }
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

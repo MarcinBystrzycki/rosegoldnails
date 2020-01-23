@@ -1,6 +1,6 @@
 <div local-class="carousel-local">
     {{#bs-carousel transition="fade" autoplay=true showIndicators=false as |carousel-item|}}
-        {{#each model.carousel as |item|}}
+        {{#each carousel as |item|}}
             <carousel-item.slide>
                 <div local-class="carousel-item-local" class="d-block w-100"
                      style="background-image: url('{{item.src}}')">
@@ -13,14 +13,14 @@
     {{#if showScrollButton}}
     <div local-class="carousel-bottom-link-local">
         <a href="#" {{on 'click' this.scrollDown}} >
-            <span local-class="text">{{model.carouselBottomLink.text}}</span>
+            <span local-class="text">{{carouselBottomLink.text}}</span>
             <span local-class="icon">
-                <FaIcon local-class="carousel-bottom-link-icon-local" @icon={{model.carouselBottomLink.icon}} @size="3x"/>
+                <FaIcon local-class="carousel-bottom-link-icon-local" @icon={{carouselBottomLink.icon}} @size="3x"/>
             </span>
         </a>
     </div>
     {{/if}}
     <div local-class="carousel-logo-local">
-        <img src={{model.mainLogo.src}} alt="">
+        <img src={{mainLogo.src}} alt="">
     </div>
 </div>
