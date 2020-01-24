@@ -3,6 +3,7 @@
         {{#if mapStyles}}
             {{#g-map lat=map.lat lng=map.lng zoom=map.zoom styles=mapStyles streetViewControl=false
                      disableDefaultUI=true
+                     zoomControl=true
                      panControl=false as |g|}}
                 {{#g.overlay lat=map.lat lng=map.lng onMouseover=(action this.toggleTooltip false)
                              onMouseleave=(action this.toggleTooltip true)}}

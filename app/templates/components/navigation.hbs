@@ -1,14 +1,12 @@
 <nav local-class="navbar" class="navbar navbar-inverse navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-<!--            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation" data-target="#main-navbar">-->
-<!--                <span class="icon-bar"></span>-->
-<!--                <span class="icon-bar"></span>-->
-<!--                <span class="icon-bar"></span>-->
-<!--            </button>-->
             {{#link-to "index" class="navbar-brand"}}
                 <img local-class="logo" src="{{logoSrc}}" alt="">
             {{/link-to}}
+            <button type="button">
+                Toggle nav
+            </button>
         </div>
 
         <div class="collapse navbar-collapse row justify-content-end" id="main-navbar">

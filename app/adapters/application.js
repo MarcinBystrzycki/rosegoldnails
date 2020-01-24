@@ -6,9 +6,9 @@ export default class ApplicationAdapter extends RESTAdapter {
     host = 'http://localhost:3000';
     namespace = 'api';
     pathForType(modelName) {
-        if (modelName === 'index') {
-            return singularize(modelName);
+        if (modelName === 'configuration') {
+            return pluralize(modelName);
         }
-        return pluralize(modelName);
+        return singularize(modelName);
     }
 }

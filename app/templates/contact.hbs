@@ -1,5 +1,6 @@
 <div {{css-transition 'fade-page'}}>
-    <h1>contact</h1>
-
+    <ContactForm>
+        <Maps @map={{model.page.map}} @address={{model.page.address}} @contact={{model.page.contactInfo}}></Maps>
+    </ContactForm>
 </div>
 

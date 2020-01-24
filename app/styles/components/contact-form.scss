@@ -1,0 +1,19 @@
+.contact-form-container {
+  background-color: $white;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contact-form,
+.contact-info {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form,
+  .contact-info {
+    width: 100%;
+  }
+}

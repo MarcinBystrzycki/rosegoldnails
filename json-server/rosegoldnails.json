@@ -73,7 +73,7 @@
     "map": {
       "lat": 52.5338178,
       "lng": 17.5948512,
-      "zoom": 16,
+      "zoom": 17,
       "styleJson": "/assets/config/map.json",
       "logoSrc": "/assets/images/rosegoldnails-logo_text_w100.png"
     },
@@ -122,7 +122,7 @@
     "map": {
       "lat": 52.5338178,
       "lng": 17.5948512,
-      "zoom": 16,
+      "zoom": 17,
       "styleJson": "/assets/config/map.json",
       "logoSrc": "/assets/images/rosegoldnails-logo_text_w100.png"
     }
