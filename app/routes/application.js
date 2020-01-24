@@ -16,4 +16,8 @@ export default class ApplicationRoute extends Route {
         });
         return true;
     }
+    @action
+    submit() {
+        console.log('dusza')
+    }
 }

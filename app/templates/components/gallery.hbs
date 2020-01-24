@@ -1,7 +1,7 @@
 <div local-class="gallery-container">
     <div local-class="gallery">
         {{#each gallery as |image|}}
-            <div local-class="gallery-image">
+            <div local-class="gallery-image" {{on 'click' (fn this.toggleModal image.src true)}}>
                 <img src={{image.src}} alt="#">
                 <div local-class="gallery-image-overlay">
                 </div>
@@ -10,4 +10,6 @@
     </div>
 </div>
 
-{{yield}}
+<BsModal @open={{this.modal}} @size="lg" @onHide={{action this.toggleModal '' false}}>
+    <img local-class="modal-image" src={{this.clickedImageSrc}} alt="">
+</BsModal>
