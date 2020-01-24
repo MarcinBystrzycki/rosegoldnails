@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  //fix transition width bug
+  width: calc(100vw - 15px);
 }
 
 .contact-form,

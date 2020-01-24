@@ -1,5 +1,6 @@
 .navbar {
   background-color: $background;
+  box-shadow: 0 8px 6px -6px lighten($transparentBlack, 25%);
 }
 .logo {
   max-height: 75px;
@@ -7,4 +8,61 @@
 .navbar-socials {
   display: flex;
   padding: 0 15px;
+}
+
+.navbar-button-mobile {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  outline: none;
+  user-select: none;
+  background-color: transparent;
+
+  .nav-burger {
+    height: 5px;
+    border-radius: 2px;
+    background-color: $transparentBlack;
+    width: 100%;
+    position: absolute;
+    transition: all .35s ease;
+
+    &:nth-of-type(1) {
+      top: 0;
+    }
+    &:nth-of-type(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:nth-of-type(3) {
+      bottom: 0;
+    }
+
+  }
+
+  &:hover {
+    .nav-burger {
+      background-color: $secondary;
+    }
+  }
+
+  &:global(.navbar-button-mobile--active) {
+    .nav-burger {
+      &:nth-of-type(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+      &:nth-of-type(3) {
+        bottom: 50%;
+        transform: translateY(50%) rotate(45deg);
+      }
+    }
+  }
 }

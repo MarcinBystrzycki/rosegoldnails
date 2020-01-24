@@ -4,9 +4,15 @@
             {{#link-to "index" class="navbar-brand"}}
                 <img local-class="logo" src="{{logoSrc}}" alt="">
             {{/link-to}}
+            {{#if isMobile}}
+                <button local-class="navbar-button-mobile" class="{{if this.mobileShowNav 'navbar-button-mobile--active'}}" onclick={{action "toggleMenu"}}>
+                    <div local-class="nav-burger"></div>
+                    <div local-class="nav-burger"></div>
+                    <div local-class="nav-burger"></div>
+                </button>
+            {{/if}}
         </div>
-
-        <div class="collapse navbar-collapse row justify-content-end" id="main-navbar">
+        <div class="collapse navbar-collapse row justify-content-end {{if this.mobileShowNav 'navbar-opened'}}" id="main-navbar">
             <ul class="nav navbar-nav">
                 {{#each links as |link|}}
                     <li class="nav-item">

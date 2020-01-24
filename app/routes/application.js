@@ -8,7 +8,7 @@ export default class ApplicationRoute extends Route {
         return this.store.findRecord('configuration', 1);
     }
     @action
-    loading(transition, originRoute) {
+    loading(transition) {
         let controller = this.controllerFor('application');
         controller.set('currentlyLoading', true);
         transition.promise.finally(function() {
