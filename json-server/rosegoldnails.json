@@ -33,7 +33,10 @@
         "href": ""
       }
     ],
-    "logoSrc": "/assets/images/rosegoldnails-logo_text_w400.png"
+    "logo": {
+      "main": "/assets/images/rosegoldnails-logo_text_w400.png",
+      "footer": "/assets/images/rosegoldnails-logo_rose_w500.png"
+    }
   }],
   "index": [{
     "id": 1,
@@ -59,8 +62,8 @@
       "text": "Więcej",
       "icon": "arrow-circle-down"
     },
-    "mainLogo": {
-      "src": "/assets/images/rosegoldnails-logo.png"
+    "logo": {
+      "main": "/assets/images/rosegoldnails-logo.png"
     },
     "address": {
       "street": "Zielony Rynek 9",
@@ -75,9 +78,35 @@
       "logoSrc": "/assets/images/rosegoldnails-logo_text_w100.png"
     },
     "contactInfo": {
-      "phone": "(+48) 663-622-823",
+      "phone": "(+48) 607-737-137",
       "email": "basialangner@hotmail.com"
-    }
+    },
+    "gallery": [
+      {
+        "id": 1,
+        "src": "/assets/images/nails/nails1.jpg"
+      },
+      {
+        "id": 2,
+        "src": "/assets/images/nails/nails2.jpg"
+      },
+      {
+        "id": 3,
+        "src": "/assets/images/nails/nails3.jpg"
+      },
+      {
+        "id": 4,
+        "src": "/assets/images/nails/nails4.jpg"
+      },
+      {
+        "id": 5,
+        "src": "/assets/images/nails/nails5.jpg"
+      },
+      {
+        "id": 6,
+        "src": "/assets/images/nails/nails6.jpg"
+      }
+    ]
   }],
   "contact": [{
     "id": 1,
@@ -87,7 +116,7 @@
       "postal": "62-200"
     },
     "contactInfo": {
-      "phone": "(+48) 663-622-823",
+      "phone": "(+48) 607-737-137",
       "email": "basialangner@hotmail.com"
     },
     "map": {

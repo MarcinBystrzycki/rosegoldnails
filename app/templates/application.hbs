@@ -1,6 +1,7 @@
 <div class="container-fluid main">
-    <Navigation @links={{model.navLinks}} @logoSrc={{model.logoSrc}} @social={{model.socialButtons}}></Navigation>
+    <Navigation @links={{model.navLinks}} @logoSrc={{model.logo.main}} @social={{model.socialButtons}}></Navigation>
 
     {{outlet}}
-</div>
 
+    <Footer @logoSrc={{model.logo.footer}} @social={{model.socialButtons}}></Footer>
+</div>

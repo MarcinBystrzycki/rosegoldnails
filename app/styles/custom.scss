@@ -5,7 +5,8 @@ body {
 .main {
   margin-top: 101px;
   position: relative;
-  padding: 0;
+  padding: 0 0 230px 0;
+  min-height: calc(100vh - 101px);
 }
 
 .loading-screen {
@@ -53,6 +54,7 @@ body {
     width: calc(100vw - 15px);
     color: $accent;
     font-size: 1.25rem;
+    padding: 1rem;
   }
 }
 

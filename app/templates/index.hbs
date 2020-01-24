@@ -2,7 +2,7 @@
     {{#if model.page.carousel}}
         <Carousel @carousel={{model.page.carousel}}
                   @carouselBottomLink={{model.page.carouselBottomLink}}
-                  @mainLogo={{model.page.mainLogo}}
+                  @logo={{model.page.logo}}
                   @showScrollButton={{true}}></Carousel>
     {{/if}}
     <div data-scroll-anchor class="info-panel">
@@ -15,6 +15,6 @@
             </div>
         </div>
     </div>
+    <Gallery @gallery={{model.page.gallery}}></Gallery>
     <Maps @map={{model.page.map}} @address={{model.page.address}} @contact={{model.page.contactInfo}}></Maps>
 </div>
-

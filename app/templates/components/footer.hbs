@@ -1,0 +1,14 @@
+<footer local-class="footer">
+    <div local-class="footer-logo-wrapper">
+        <img src={{logoSrc}} alt="">
+    </div>
+    <p local-class="footer-copyright">
+        made by mbystrzycki
+        <FaIcon local-class="footer-copyright-icon" @icon="copyright" @prefix="far"/>
+    </p>
+    <div local-class="footer-socials">
+        {{#each social as |socialButton|}}
+            <SocialButton @socialButton={{socialButton}}></SocialButton>
+        {{/each}}
+    </div>
+</footer>

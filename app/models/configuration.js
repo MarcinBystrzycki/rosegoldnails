@@ -4,5 +4,5 @@ export default class ConfigurationModel extends Model {
     @attr('string') appTitle;
     @attr navLinks;
     @attr socialButtons;
-    @attr('string') logoSrc;
+    @attr logo;
 }

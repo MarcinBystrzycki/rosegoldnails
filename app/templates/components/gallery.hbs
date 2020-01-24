@@ -1,0 +1,13 @@
+<div local-class="gallery-container">
+    <div local-class="gallery">
+        {{#each gallery as |image|}}
+            <div local-class="gallery-image">
+                <img src={{image.src}} alt="#">
+                <div local-class="gallery-image-overlay">
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+{{yield}}
